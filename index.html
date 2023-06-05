@@ -94,6 +94,23 @@
       transform: translate(-50%, -50%);
       opacity: 0.3;
     }
+
+    /* Mobile View */
+    @media (max-width: 768px) {
+      .watermark-container {
+        text-align: center;
+      }
+
+      .watermark {
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
+      }
+
+      .cellphone-image {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -148,7 +165,7 @@
     function toggleView() {
       var body = document.getElementsByTagName("body")[0];
       var viewToggleButton = document.getElementById("viewToggleButton");
-      
+
       if (body.classList.contains("mobile-view")) {
         body.classList.remove("mobile-view");
         viewToggleButton.textContent = "Switch to Mobile View";
