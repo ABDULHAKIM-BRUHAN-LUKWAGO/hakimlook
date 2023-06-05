@@ -132,7 +132,7 @@
     &copy; 2023 My Website. All rights reserved.
   </footer>
 
-  <button onclick="toggleMobileView()">Switch to Mobile View</button>
+  <button id="viewToggleButton" onclick="toggleView()">Toggle View</button>
 
   <script>
     function toggleDropdown() {
@@ -145,10 +145,17 @@
       gallery.classList.remove("hidden");
     }
 
-    function toggleMobileView() {
+    function toggleView() {
       var body = document.getElementsByTagName("body")[0];
-      body.style.width = "375px"; // Set the width to the desired mobile view size
-      body.style.margin = "0 auto"; // Center the content
+      var viewToggleButton = document.getElementById("viewToggleButton");
+      
+      if (body.classList.contains("mobile-view")) {
+        body.classList.remove("mobile-view");
+        viewToggleButton.textContent = "Switch to Mobile View";
+      } else {
+        body.classList.add("mobile-view");
+        viewToggleButton.textContent = "Switch to Desktop View";
+      }
     }
   </script>
 </body>
