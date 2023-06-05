@@ -98,7 +98,7 @@
 </head>
 <body>
   <header>
-    <h1>ABDULHAKIM LUKWAGO</h1>
+    <h1>Welcome to My Website</h1>
   </header>
 
   <div class="dropdown">
@@ -112,7 +112,7 @@
 
   <main>
     <div class="watermark-container">
-      <img src="20220925_181849.jpg" alt="Watermark" class="watermark">
+      <img src="images/20220925_181849.jpg" alt="Watermark" class="watermark">
       <h2>About Me</h2>
       <p>Hello! I am a web developer.</p>
     </div>
@@ -132,6 +132,8 @@
     &copy; 2023 My Website. All rights reserved.
   </footer>
 
+  <button onclick="toggleMobileView()">Switch to Mobile View</button>
+
   <script>
     function toggleDropdown() {
       var dropdownContent = document.getElementById("dropdownContent");
@@ -141,6 +143,12 @@
     function showGallery() {
       var gallery = document.getElementById("gallery");
       gallery.classList.remove("hidden");
+    }
+
+    function toggleMobileView() {
+      var body = document.getElementsByTagName("body")[0];
+      body.style.width = "375px"; // Set the width to the desired mobile view size
+      body.style.margin = "0 auto"; // Center the content
     }
   </script>
 </body>
