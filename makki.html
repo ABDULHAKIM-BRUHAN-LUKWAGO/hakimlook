@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #FF0000;
+      color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #FF0000;
+      color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Dropdown menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Button style */
+    .dropdown-button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    /* Resized image */
+    .cellphone-image {
+      width: 200px;
+      height: auto;
+    }
+
+    /* Hidden gallery */
+    .hidden {
+      display: none;
+    }
+
+    /* Watermark */
+    .watermark-container {
+      position: relative;
+    }
+
+    .watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+  </header>
+
+  <div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown()">Menu</button>
+    <div class="dropdown-content" id="dropdownContent">
+      <a href="#" onclick="showGallery()">Item 1</a>
+      <a href="#">Item 2</a>
+      <a href="#">Item 3</a>
+    </div>
+  </div>
+
+  <main>
+    <div class="watermark-container">
+      <img src="C:\Users\ABDULHAKIM LUKWAGO\Desktop\makki web\pictures\20220925_181849.jpg" alt="Watermark" class="watermark">
+      <h2>About Me</h2>
+      <p>Hello! I am a web developer.</p>
+    </div>
+
+    <h2>Gallery</h2>
+    <div id="gallery" class="hidden">
+      <img src="C:\Users\ABDULHAKIM LUKWAGO\Desktop\makki web\pictures\20230508_153554.jpg" alt="20230508_153554" class="cellphone-image">
+      <img src="image2.jpg" alt="Image 2">
+      <img src="image3.jpg" alt="Image 3">
+    </div>
+  </main>
+
+  <footer>
+    <h2>Contact</h2>
+    <p>Email: info@example.com</p>
+    <p>Phone: 123-456-7890</p>
+    &copy; 2023 My Website. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleDropdown() {
+      var dropdownContent = document.getElementById("dropdownContent");
+      dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+    }
+
+    function showGallery() {
+      var gallery = document.getElementById("gallery");
+      gallery.classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
