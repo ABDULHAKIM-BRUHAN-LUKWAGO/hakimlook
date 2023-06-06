@@ -10,6 +10,7 @@
       padding: 0;
     }
 
+    /* Header styles */
     header {
       background-color: #FF0000;
       color: #FFFFFF;
@@ -21,10 +22,12 @@
       margin: 0;
     }
 
+    /* Main content styles */
     main {
       padding: 20px;
     }
 
+    /* Footer styles */
     footer {
       background-color: #FF0000;
       color: #FFFFFF;
@@ -32,7 +35,7 @@
       text-align: center;
     }
 
-    /* Dropdown menu */
+    /* Dropdown menu styles */
     .dropdown {
       position: relative;
       display: inline-block;
@@ -45,6 +48,7 @@
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
+      border-radius: 5px; /* Rounded corners for dropdown menu */
     }
 
     .dropdown:hover .dropdown-content {
@@ -114,10 +118,12 @@
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>Welcome to My Website</h1>
   </header>
 
+  <!-- Dropdown menu -->
   <div class="dropdown">
     <button class="dropdown-button" onclick="toggleDropdown()">Menu</button>
     <div class="dropdown-content" id="dropdownContent">
@@ -127,6 +133,7 @@
     </div>
   </div>
 
+  <!-- Main content -->
   <main>
     <div class="watermark-container">
       <img src="images/20220925_181849.jpg" alt="Watermark" class="watermark">
@@ -142,6 +149,7 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     <h2>Contact</h2>
     <p>Email: info@example.com</p>
@@ -149,19 +157,23 @@
     &copy; 2023 My Website. All rights reserved.
   </footer>
 
+  <!-- Toggle View Button -->
   <button id="viewToggleButton" onclick="toggleView()">Toggle View</button>
 
   <script>
+    // Toggle dropdown menu visibility
     function toggleDropdown() {
       var dropdownContent = document.getElementById("dropdownContent");
       dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
     }
 
+    // Show gallery
     function showGallery() {
       var gallery = document.getElementById("gallery");
       gallery.classList.remove("hidden");
     }
 
+    // Toggle between mobile and desktop view
     function toggleView() {
       var body = document.getElementsByTagName("body")[0];
       var viewToggleButton = document.getElementById("viewToggleButton");
